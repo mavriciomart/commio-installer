@@ -5,10 +5,7 @@ import {
   QLabel,
   FlexLayout,
   QPushButton,
-  QIcon,
-  QProgressBar,
 } from "@nodegui/nodegui";
-import logo from "../assets/logox200.png";
 import { downloadFile } from "./downloadHandler";
 import { getApplicationInstallLocation, getUserDataPath } from "./utils";
 
@@ -19,23 +16,6 @@ const centralWidget = new QWidget();
 centralWidget.setObjectName("myroot");
 const rootLayout = new FlexLayout();
 centralWidget.setLayout(rootLayout);
-
-const label = new QLabel();
-label.setObjectName("mylabel");
-label.setText("Hello");
-
-/* const button = new QPushButton();
-button.setIcon(new QIcon(logo));
- 
-const label2 = new QLabel();
-label2.setText("World");
-label2.setInlineStyle(`
-  color: red;
-`);
- 
-rootLayout.addWidget(label);
-rootLayout.addWidget(button);
-rootLayout.addWidget(label2); */
 
 const ProgressLabel = new QLabel();
 ProgressLabel.setInlineStyle("color: #000;");
