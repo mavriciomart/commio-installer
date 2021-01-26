@@ -2,3 +2,5 @@ node_modules
 dist/
 *.log
 .vscode
+build/
+.DS_Store
