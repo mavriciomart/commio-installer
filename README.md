@@ -1,42 +1,33 @@
-# commio-installer
+# commio-installer (PoC)
+
+## Development
+
+Install dependencies
 
 ```bash
-# Install dependencies
-npm install
-# Run the app
-npm start
+yarn install
 ```
 
-## Packaging app as a distributable
+Local development
 
-In order to distribute your finished app, you can use [@nodegui/packer](https://github.com/nodegui/packer)
-
-### Step 1: (_**Run this command only once**_)
-
-```sh
-npx nodegui-packer --init MyAppName
+```bash
+yarn start
 ```
 
-This will produce the deploy directory containing the template. You can modify this to suite your needs. Like add icons, change the name, description and add other native features or dependencies. Make sure you commit this directory.
+Creating a production build
 
-### Step 2: (_**Run this command every time you want to build a new distributable**_)
-
-Next you can run the pack command:
-
-```sh
-npm run build
+```bash
+yarn build:package
 ```
 
-This will produce the js bundle along with assets inside the `./dist` directory
+## To Do
 
-```sh
-npx nodegui-packer --pack ./dist
-```
-
-This will build the distributable using @nodegui/packer based on your template. The output of the command is found under the build directory. You should gitignore the build directory.
-
-More details about packer can be found here: https://github.com/nodegui/packer
-
-## License
-
-MIT
+- [ ] Update getApplicationInstallLocation for linux
+- [ ] Update getApplicationInstallLocation for windows
+- [ ] Add wizard steps
+- [ ] Prevent closing when downloading
+- [ ] Create linux package template
+- [ ] Create windows package template
+- [ ] Add script to sign macOS package
+- [ ] Add script to notarize macOS package
+- [ ] Add script to sign windows package
