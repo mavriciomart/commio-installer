@@ -7,9 +7,9 @@
   "private": true,
   "scripts": {
     "build": "webpack -p",
+    "build:package": "npm run build && npx nodegui-packer --pack ./dist",
     "start": "webpack && qode ./dist/index.js",
-    "debug": "webpack && qode --inspect ./dist/index.js",
-    "build:package": "npm run build && npx nodegui-packer --pack ./dist"
+    "debug": "webpack && qode --inspect ./dist/index.js"
   },
   "dependencies": {
     "@nodegui/nodegui": "^0.25.0",

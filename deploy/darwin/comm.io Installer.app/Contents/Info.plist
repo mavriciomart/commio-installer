@@ -14,6 +14,8 @@
     <string>6.0</string>
     <key>CFBundleName</key>
     <string>comm.io Installer</string>
+    <key>CFBundleIconFile</key>
+    <string>comm.io.icns</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
